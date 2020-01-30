@@ -38,7 +38,7 @@ export default function UpdateForm(props) {
       .put(`http://localhost:5000/api/movies/${id}`, movie)
       .then(res => {
         console.log("Movie Fetched!", res);
-        props.setMovie(initialMovie);
+        setMovie(initialMovie);
         props.history.push(`/movies/${id}`);
       })
       .catch(err => {
@@ -47,7 +47,7 @@ export default function UpdateForm(props) {
   };
 
   return (
-    <div>
+    <div className="form-content">
       <h2>Update Your Saved Movie Details</h2>
       <form onSubmit={handleSubmit}>
         <label>Title: </label>
@@ -83,7 +83,7 @@ export default function UpdateForm(props) {
           onChange={handleChange}
         />
 
-        <button type="submit">Update Movie Info</button>
+        <button>Update Movie Info</button>
       </form>
     </div>
   );

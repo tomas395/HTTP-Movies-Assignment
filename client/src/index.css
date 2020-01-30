@@ -43,16 +43,21 @@ body {
 .saved-movie {
   margin: 0 10px;
 }
+
 .saved-active {
   color: blue;
   border: 1px solid grey;
   padding: 5px;
 }
+
 .save-wrapper {
+  display: flex;
+  justify-content: space-between;
   position: relative;
   width: 75%;
   margin: 1rem auto;
 }
+
 .save-button {
   position: absolute;
   top: 25px;
@@ -61,6 +66,7 @@ body {
   padding: 5px 10px;
   background-color: lightseagreen;
 }
+
 .save-button:hover {
   background-color: green;
   color: white;
@@ -74,4 +80,12 @@ body {
 .movie-warning {
   color: red;
   text-align: center;
+}
+
+.form-content {
+  text-align: center;
+}
+
+label {
+  margin-left: 4px;
 }

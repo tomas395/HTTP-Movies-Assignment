@@ -54,7 +54,11 @@ export default class Movie extends React.Component {
     return (
       <div className="save-wrapper">
         <MovieCard movie={this.state.movie} />
-        <div className="save-button" onClick={this.saveMovie}>
+        <div
+          className="save-button"
+          onClick={this.saveMovie}
+          style={{ marginRight: "55px" }}
+        >
           Save
         </div>
         <div className="save-button">
@@ -65,7 +69,7 @@ export default class Movie extends React.Component {
           onClick={e => {
             this.deleteMovie(e, this.props.match.params.id);
           }}
-          style={{ marginRight: "80px" }}
+          style={{ marginRight: "120px" }}
         >
           Delete
         </div>

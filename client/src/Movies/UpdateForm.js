@@ -14,14 +14,13 @@ export default function UpdateForm(props) {
   const [movie, setMovie] = useState(initialMovie);
   useEffect(() => {
     axios.get(`http://localhost:5000/api/movies/${id}`).then(res => {
-      console.log("Movies GET Worked!", res.data);
+      console.log("Movies .get Worked!", res.data);
       setMovie(res.data);
     });
   }, [id]);
 
   const handleChange = e => {
-    console.log("HandleChange Worked!");
-
+    console.log("handleChange Worked!");
     setMovie({ ...movie, [e.target.name]: e.target.value });
   };
 
